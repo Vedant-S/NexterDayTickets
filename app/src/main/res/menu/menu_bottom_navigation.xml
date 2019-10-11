@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bot_nav_tickets"
+        android:icon="@drawable/nav_ic_ticket"
+        app:showAsAction ="always"
+        android:title="Tickets"/>
+
+    <item
+        android:id="@+id/bot_nav_events"
+        android:icon="@drawable/nav_ic_events"
+        app:showAsAction ="always"
+        android:title="Events"/>
+
+    <item
+        android:id="@+id/bot_nav_account"
+        android:icon="@drawable/login_ic_name"
+        android:iconTint="@color/colorBlack"
+        app:showAsAction ="always"
+        android:title="Account"/>
+
+</menu>

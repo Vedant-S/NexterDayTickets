@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RegisterActivity">
+
+    <View
+        android:id="@+id/viewRegisterHeader"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="-120dp"
+        android:layout_marginTop="-115dp"
+        android:background="@drawable/circle"/>
+
+    <ImageView
+        android:id="@+id/imageViewRegisterLogo"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/nexterday_logo_white" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:alpha="0.35"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/building"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutRegisterDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewRegisterHeader"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/textViewRegisterHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorPurpleDark"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:textSize="20dp"
+            android:text="Sign Up"/>
+
+        <View
+            android:id="@+id/horizontalRuleRegisterHeader"
+            android:layout_width="60dp"
+            android:layout_height="2dp"
+            android:layout_below="@+id/textViewRegisterHeader"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorPurpleDark"/>
+
+        <com.github.florent37.materialtextfield.MaterialTextField
+            android:id="@+id/materialRegisterEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mtf_image="@drawable/login_ic_email"
+            android:layout_marginTop="25dp"
+            app:mtf_labelColor="@color/colorBlack">
+
+            <EditText
+                android:id="@+id/editTextRegisterEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:maxLength="60"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp" />
+
+        </com.github.florent37.materialtextfield.MaterialTextField>
+
+        <com.github.florent37.materialtextfield.MaterialTextField
+            android:id="@+id/materialRegisterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mtf_image="@drawable/login_ic_name"
+            android:layout_below="@+id/materialRegisterEmail"
+            android:layout_marginTop="10dp"
+            app:mtf_labelColor="@color/colorBlack">
+
+            <EditText
+                android:id="@+id/editTextRegisterName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full Name"
+                android:maxLength="30"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp" />
+
+        </com.github.florent37.materialtextfield.MaterialTextField>
+
+
+        <com.github.florent37.materialtextfield.MaterialTextField
+            android:id="@+id/materialRegisterPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/materialRegisterName"
+            app:mtf_image="@drawable/login_ic_password"
+            android:layout_marginTop="10dp"
+            app:mtf_labelColor="@color/colorBlack">
+
+            <EditText
+                android:id="@+id/editTextRegisterPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Password"
+                android:maxLength="30"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp" />
+
+        </com.github.florent37.materialtextfield.MaterialTextField>
+
+        <TextView
+            android:id="@+id/textViewRegisterError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/colorBlack"
+            android:textAlignment="center"
+            android:layout_below="@+id/materialRegisterPassword"/>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spinKitRegister"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/textViewRegisterError"
+            android:layout_centerHorizontal="true"
+            style="@style/SpinKitView.FadingCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/colorPurpleLight" />
+
+        <Button
+            android:id="@+id/buttonRegisterSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_ui"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:layout_below="@id/textViewRegisterError"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"
+            android:textAllCaps="false"
+            android:text="Sign Up" />
+
+        <Button
+            android:id="@+id/buttonRegisterSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_ui_negative"
+            android:layout_below="@+id/buttonRegisterSignUp"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:textAllCaps="false"
+            android:text="Sign In" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
