@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress AndroidElementNotAllowed -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:context=".activity.DisplayEventActivity"
+    android:layout_height="wrap_content">
+
+    <!-- Event Details Scroll View -->
+    <ScrollView
+        android:id="@+id/scrollViewDisplaySuper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Extra Relative Layout as SV can have only 1 child -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Relative Layout Header -->
+            <!--suppress AndroidElementNotAllowed -->
+            <RelativeLayout
+                android:id="@+id/relativeLayoutDisplayHeader"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/background_rotated_alt">
+
+                <!-- CIRCLE UI -->
+                <ImageView
+                    android:id="@+id/loginUICircle1"
+                    android:layout_width="134dp"
+                    android:layout_height="134dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="-75dp"
+                    android:layout_marginEnd="-80dp"
+                    android:alpha="0.07"
+                    android:src="@drawable/circle" />
+
+                <ImageView
+                    android:id="@+id/loginUICircle2"
+                    android:layout_width="134dp"
+                    android:layout_height="134dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="-100dp"
+                    android:layout_marginBottom="110dp"
+                    android:alpha="0.1"
+                    android:src="@drawable/circle" />
+
+                <ImageView
+                    android:id="@+id/loginUICircle3"
+                    android:layout_width="182dp"
+                    android:layout_height="182dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="-80dp"
+                    android:layout_marginBottom="-30dp"
+                    android:alpha="0.10"
+                    android:src="@drawable/circle" />
+
+                <ImageView
+                    android:id="@+id/loginUICircle4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="50dp"
+                    android:alpha="0.05"
+                    android:src="@drawable/circle" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutDisplayHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutDisplayDV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayoutDisplayDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/button_ui_alternative"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/imageViewDateIC"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/ic_display_date"
+                                android:tint="@color/colorAccent" />
+
+                            <TextView
+                                android:id="@+id/textViewDisplayDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/imageViewDateIC"
+                                android:fontFamily="@font/proxima_nova_light"
+                                android:text="Date"
+                                android:textColor="@color/colorAccent" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayoutLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:background="@drawable/button_ui_alternative"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/imageViewLocationIC"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/ic_display_location"
+                                android:tint="@color/colorAccent" />
+
+                            <TextView
+                                android:id="@+id/textViewDisplayLocation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/imageViewLocationIC"
+                                android:fontFamily="@font/proxima_nova_light"
+                                android:text="Location"
+                                android:textColor="@color/colorAccent" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayoutDisplayPriceAndShare"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayoutDisplayPrice"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/circle"
+                            android:backgroundTint="@color/colorWhite"
+                            android:scaleType="fitXY">
+
+                            <TextView
+                                android:id="@+id/textViewDisplayPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:textSize="25dp"
+                                android:textStyle="bold"
+                                tools:text="FREE"
+                                android:textColor="@color/colorAccent" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <!-- Card View Photo -->
+            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardViewImageZoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginRight="20dp"
+                card_view:cardCornerRadius="15dp"
+                card_view:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imageViewEventResizable"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_launcher_round" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Relative Layout For Description -->
+            <RelativeLayout
+                android:id="@+id/relativeLayoutDisplayDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewDisplayTitle"
+                android:layout_marginTop="-15dp"
+                android:paddingBottom="20dp"
+                android:background="@color/colorAccent">
+
+                <TextView
+                    android:id="@+id/textViewDisplayDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:textSize="16dp"
+                    android:text="@string/lorem_ipsum"
+                    android:textColor="@color/colorWhite" />
+
+            </RelativeLayout>
+
+            <!-- Text View Event Title -->
+            <TextView
+                android:id="@+id/textViewDisplayTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardViewImageZoom"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/box_ui"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                tools:text="Event Title" />
+
+            <!-- Relative Layout Contact -->
+            <RelativeLayout
+                android:id="@+id/relativeLayoutDisplayContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewDisplayHeaderContact"
+                android:background="@color/colorAccent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:padding="20dp"
+                android:layout_marginTop="-15dp"
+                android:layout_marginBottom="40dp">
+
+                <ImageView
+                    android:id="@+id/imageViewDisplayInstagram"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:tint="@color/colorWhite"
+                    android:src="@drawable/login_ic_name" />
+
+                <TextView
+                    android:id="@+id/textViewDisplayContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="15dp"
+                    android:layout_toEndOf="@id/imageViewDisplayInstagram"
+                    tools:text="@string/lorem_ipsum_short"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <!-- Text View Contact -->
+            <TextView
+                android:id="@+id/textViewDisplayHeaderContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relativeLayoutDisplayDescription"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-15dp"
+                android:background="@drawable/box_ui"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Contact Details" />
+
+            <!-- Blank View Filler -->
+            <View
+                android:id="@+id/relativeLayoutOthers"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/relativeLayoutDisplayContact"
+                android:background="@color/colorAccent"
+                android:padding="12dp"
+                android:layout_marginTop="-45dp"
+                android:layout_marginBottom="40dp"/>
+
+        </RelativeLayout>
+    </ScrollView>
+    <!-- End of main scroll view -->
+
+    <!-- Register Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonRegisterHere"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/box_ui"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:text="REGISTER"
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

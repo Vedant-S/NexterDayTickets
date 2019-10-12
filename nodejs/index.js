@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 
 //Import routes
 const authRoute = require('./routes/authentication');
-const postRoute = require('./routes/post');
+const eventRoute = require('./routes/events');
 const validateRoute = require('./routes/validateToken');
 
 
@@ -26,7 +26,7 @@ app.use(express.json());
 
 //Routes middleware (Prefix)
 app.use('/api/user',authRoute);
-app.use('/api/posts',postRoute);
+app.use('/api/events',eventRoute);
 app.use('/api/validate',validateRoute);
 app.use('/api/test',(req,res) => {
     res.send('Server Up & Running');

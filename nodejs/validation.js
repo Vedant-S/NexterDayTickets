@@ -29,5 +29,33 @@ const userRegisterValidation = data => {
     return schema.validate(data);
   };
 
+  const eventValidation = data => {
+    const schema = Joi.object({
+      host: Joi.string()
+        .min(6)
+        .required(),
+      title: Joi.string()
+        .min(3)
+        .required(),
+      description: Joi.string()
+        .min(6)
+        .required(),
+      location: Joi.string()
+        .min(3)
+        .required(),
+      eventTimeStamp: Joi.number()
+        .required(),
+      imageURL: Joi.string()
+        .min(6)
+        .required(),
+      maxAttendees: Joi.number()
+        .required(),
+      uploadTime: Joi.date()
+    });
+    return schema.validate(data);
+  };
+
   module.exports.userRegisterValidation = userRegisterValidation;
   module.exports.userLoginValidation = userLoginValidation;
+  module.exports.eventValidation = eventValidation;
+

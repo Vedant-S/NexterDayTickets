@@ -1,8 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:layout_margin="10dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPurpleDark">
+    android:layout_height="match_parent">
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayoutFGAAccountDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:background="@drawable/rectangle_stroke_black">
+
+        <TextView
+            android:id="@+id/textViewFGAAccountHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorPurpleDark"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:layout_marginBottom="15dp"
+            android:text="ACCOUNT DETIALS"/>
+
+        <TextView
+            android:id="@+id/textViewFGAAccountName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="15dp"
+            android:textColor="@color/colorBlack"
+            tools:text="Name"/>
+
+        <TextView
+            android:id="@+id/textViewFGAAccountEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="15dp"
+            android:textColor="@color/colorBlack"
+            tools:text="Email"/>
+
+        <Button
+            android:id="@+id/buttonFGAAccountLogOut"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/button_ui_negative"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="20dp"
+            android:text="LOG OUT"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relayiveLayoutFGAAccountEventHosted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/linearLayoutFGAAccountDetails"
+        android:padding="10dp"
+        android:background="@drawable/rectangle_stroke_black">
+
+        <TextView
+            android:id="@+id/textViewFGAEventHosted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorPurpleDark"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:layout_marginBottom="20dp"
+            android:text="EVENT HOSTED"/>
+
+        <TextView
+            android:id="@+id/textViewFGANoEventDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_below="@+id/textViewFGAEventHosted"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginBottom="15dp"
+            android:layout_centerInParent="true"
+            android:text="You haven't hosted an event yet. "/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

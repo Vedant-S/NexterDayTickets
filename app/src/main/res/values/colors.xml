@@ -2,12 +2,13 @@
 <resources>
     <color name="colorPrimary">#8e44ad</color>
     <color name="colorPrimaryDark">#9b59b6</color>
-    <color name="colorAccent">#ecf0f1</color>
+    <color name="colorAccent">#8e44ad</color>
 
     <color name="colorPurpleLight">#9b59b6</color>
     <color name="colorPurpleDark">#8e44ad</color>
     <color name="colorGreyLight">#ecf0f1</color>
     <color name="colorGreyDark">#bdc3c7</color>
+    <color name="colorDarkGrey">#62696D</color>
     <color name="colorBlack">#000000</color>
     <color name="colorWhite">#ffffff</color>
 

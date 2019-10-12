@@ -1,9 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorBlack">
+    android:layout_height="match_parent">
 
+    <LinearLayout
+        android:id="@+id/linearLayoutEventToolbar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPurpleDark"
+        android:paddingStart="20dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="Events"
+            android:textSize="24dp"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:textColor="@color/colorWhite" />
+
+        <ImageView
+            android:id="@+id/imageViewFGERefresh"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_refresh" />
+
+        <ImageView
+            android:id="@+id/imageViewFGEAddEvent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_add_event" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEvents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:layout_below="@+id/linearLayoutEventToolbar" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spinKitEventProgressBar"
+        style="@style/SpinKitView.Large.ChasingDots"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:padding="20dp"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:SpinKit_Color="@color/colorPrimary" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutLoadingFailed"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewLoading"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/ic_loading"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewLoading"
+            android:textAlignment="center"
+            android:layout_marginTop="5dp"
+            android:text="Server Down or Slow Connection"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>

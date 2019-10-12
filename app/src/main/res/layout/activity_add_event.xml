@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddEventActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutAddEventMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutAddEventToolbar"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPurpleDark"
+            android:paddingStart="20dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="Add Event"
+                android:textSize="24dp"
+                android:fontFamily="@font/proxima_nova_bold"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutAddEventForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayoutAddEventToolbar"
+            android:layout_margin="20dp">
+
+            <EditText
+                android:id="@+id/editTextAddEventTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:hint="Title" />
+
+            <EditText
+                android:id="@+id/editTextAddEventDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextAddEventTitle"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorBlack"
+                android:hint="Description" />
+
+            <EditText
+                android:id="@+id/editTextAddEventImageURL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextAddEventDescription"
+                android:layout_marginTop="10dp"
+                android:textColor="#000000"
+                android:inputType="textUri"
+                android:textSize="20dp"
+                android:hint="ImageURL" />
+
+            <Button
+                android:id="@+id/buttonAddEventViewImage"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_ui"
+                android:textColor="@color/colorPurpleDark"
+                android:layout_below="@id/editTextAddEventImageURL"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:padding="10dp"
+                android:text="VIEW IMAGE"/>
+
+            <ImageView
+                android:id="@+id/imageViewAddEventDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/buttonAddEventViewImage" />
+
+            <View
+                android:id="@+id/horizontalRule1"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_gravity="center"
+                android:layout_below="@+id/imageViewAddEventDisplay"
+                android:layout_margin="10dp"
+                android:background="#000000" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutAddEventChild"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/horizontalRule1">
+
+
+                <EditText
+                    android:id="@+id/editTextAddEventContactDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:hint="Contact Details" />
+
+                <EditText
+                    android:id="@+id/editTextAddEventFee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/editTextAddEventContactDetails"
+                    android:layout_marginTop="10dp"
+                    android:hint="Event Fee"
+                    android:textColor="@color/colorBlack"
+                    android:inputType="numberDecimal"/>
+
+                <EditText
+                    android:id="@+id/editTextAddEventVenue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:layout_below="@id/editTextAddEventFee"
+                    android:hint="Venue" />
+
+
+                <View
+                    android:id="@+id/horizontalRuleAddEvent2"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center"
+                    android:layout_below="@+id/editTextAddEventVenue"
+                    android:layout_margin="10dp"
+                    android:background="#000000" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutAddEventDate"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/horizontalRuleAddEvent2"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/buttonAddEventTimePicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/button_ui"
+                        android:textColor="@color/colorPurpleDark"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:text="DATE &amp; TIME" />
+
+                    <TextView
+                        android:id="@+id/textViewAddEventTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Date + Time"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/colorPurpleDark"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/buttonAddEventTimePicker"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/horizontalRuleAddEvent3"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center"
+                    android:layout_below="@+id/relativeLayoutAddEventDate"
+                    android:layout_margin="10dp"
+                    android:background="#000000" />
+
+                <EditText
+                    android:id="@+id/editTextRegisterMax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/horizontalRuleAddEvent3"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/colorBlack"
+                    android:hint="Maximum Attendees" />
+
+
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/horizontalRuleAddEvent4"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_gravity="center"
+                android:layout_below="@+id/relativeLayoutAddEventChild"
+                android:layout_margin="10dp"
+                android:background="#000000" />
+
+            <TextView
+                android:id="@+id/textViewAddEventError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="ERROR"
+                android:textAlignment="center"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/colorPurpleDark"
+                android:layout_below="@id/relativeLayoutAddEventChild"/>
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/spinKitAddEventPush"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                style="@style/SpinKitView.FadingCircle"
+                app:SpinKit_Color="@color/colorPurpleDark"
+                android:visibility="gone"
+                android:layout_below="@id/relativeLayoutAddEventChild"/>
+
+            <Button
+                android:id="@+id/buttonPushEvent"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/textViewAddEventError"
+                android:background="@drawable/button_ui_negative"
+                android:textSize="20dp"
+                android:fontFamily=""
+                android:textColor="@color/colorWhite"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:text="PUSH EVENT" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
